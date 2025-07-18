@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /newyork/
+Allow: /losangeles/
+Allow: /sanfrancisco/
+Allow: /boston/
+Allow: /seattle/
+Allow: /lasvegas/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://xiaohongmodels.com/sitemap.xml
+
+# Additional sitemaps
+Sitemap: https://xiaohongmodels.com/sitemap-newyork.xml
+Sitemap: https://xiaohongmodels.com/sitemap-losangeles.xml
+Sitemap: https://xiaohongmodels.com/sitemap-sanfrancisco.xml
+Sitemap: https://xiaohongmodels.com/sitemap-boston.xml
+Sitemap: https://xiaohongmodels.com/sitemap-seattle.xml
+Sitemap: https://xiaohongmodels.com/sitemap-lasvegas.xml
+
+# Host directive
+Host: https://xiaohongmodels.com 
