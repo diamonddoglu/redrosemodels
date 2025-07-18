@@ -104,45 +104,14 @@ export default function RootLayout({
         <SEOOptimizer />
         <SEOKeywords />
         
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'GA_MEASUREMENT_ID', {
-                page_title: document.title,
-                page_location: window.location.href,
-              });
-            `,
-          }}
-          strategy="afterInteractive"
-        />
-        
-        {/* Preconnect to external domains for performance */}
+        {/* Critical resource hints - load first */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        
-        {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         
-        {/* Preload critical resources */}
-        <link rel="preload" href="/xiaohongmodels-hero.jpg" as="image" />
-        <link rel="preload" href="/favicon.svg" as="image" />
-        
-        {/* Manifest for PWA */}
-        <link rel="manifest" href="/manifest.json" />
-        
-        {/* Apple touch icons */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        {/* Critical icons - load early */}
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         
@@ -163,12 +132,40 @@ export default function RootLayout({
         <meta name="geo.position" content="40.7128;-74.0060" />
         <meta name="ICBM" content="40.7128, -74.0060" />
         
-        {/* Structured data for better search results - Deferred */}
+        {/* Non-critical resources - load after critical content */}
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <LanguageProvider>
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </LanguageProvider>
+        
+        {/* Non-critical scripts - load after page content */}
         <Script
-          id="website-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'GA_MEASUREMENT_ID', {
+              page_title: document.title,
+              page_location: window.location.href,
+            });
+          `}
+        </Script>
+        
+        {/* Structured data - load after page content */}
+        <Script id="website-schema" strategy="afterInteractive">
+          {`
+            ${JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "xiaohongmodels.vercel.app",
@@ -185,17 +182,13 @@ export default function RootLayout({
                 "name": "xiaohongmodels",
                 "url": "https://xiaohongmodels.vercel.app"
               }
-            })
-          }}
-          strategy="afterInteractive"
-        />
+            })}
+          `}
+        </Script>
         
-        {/* Local Business Schema - Deferred */}
-        <Script
-          id="business-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+        <Script id="local-business-schema" strategy="afterInteractive">
+          {`
+            ${JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "xiaohongmodels",
@@ -241,17 +234,13 @@ export default function RootLayout({
               "serviceType": "模特私教服务",
               "priceRange": "$$",
               "openingHours": "Mo-Su 00:00-23:59"
-            })
-          }}
-          strategy="afterInteractive"
-        />
+            })}
+          `}
+        </Script>
         
-        {/* FAQ Schema - Deferred */}
-        <Script
-          id="faq-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+        <Script id="faq-schema" strategy="afterInteractive">
+          {`
+            ${JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
               "mainEntity": [
@@ -280,44 +269,9 @@ export default function RootLayout({
                   }
                 }
               ]
-            })
-          }}
-          strategy="afterInteractive"
-        />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <LanguageProvider>
-          {children}
-          <Analytics />
-          <SpeedInsights />
-        </LanguageProvider>
-        
-        {/* Page load optimization script */}
-        <Script
-          id="page-load-optimization"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Enable transitions after page load
-              window.addEventListener('load', function() {
-                document.body.classList.add('loaded');
-              });
-              
-              // Preload critical images
-              const criticalImages = [
-                '/xiaohongmodels-hero.jpg',
-                '/favicon.svg'
-              ];
-              
-              criticalImages.forEach(src => {
-                const img = new Image();
-                img.src = src;
-              });
-            `
-          }}
-        />
+            })}
+          `}
+        </Script>
       </body>
     </html>
   );
