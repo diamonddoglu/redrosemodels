@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SEOOptimizer from "@/components/SEOOptimizer";
@@ -11,13 +10,11 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: 'swap',
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  display: 'swap',
 });
 
 export const viewport: Viewport = {
@@ -104,14 +101,39 @@ export default function RootLayout({
         <SEOOptimizer />
         <SEOKeywords />
         
-        {/* Critical resource hints - load first */}
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'GA_MEASUREMENT_ID', {
+                page_title: document.title,
+                page_location: window.location.href,
+              });
+            `,
+          }}
+        />
+        
+        {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
+        
+        {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         
-        {/* Critical icons - load early */}
+        {/* Manifest for PWA */}
+        <link rel="manifest" href="/manifest.json" />
+        
+        {/* Apple touch icons */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         
@@ -132,40 +154,11 @@ export default function RootLayout({
         <meta name="geo.position" content="40.7128;-74.0060" />
         <meta name="ICBM" content="40.7128, -74.0060" />
         
-        {/* Non-critical resources - load after critical content */}
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <LanguageProvider>
-          {children}
-          <Analytics />
-          <SpeedInsights />
-        </LanguageProvider>
-        
-        {/* Non-critical scripts - load after page content */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID', {
-              page_title: document.title,
-              page_location: window.location.href,
-            });
-          `}
-        </Script>
-        
-        {/* Structured data - load after page content */}
-        <Script id="website-schema" strategy="afterInteractive">
-          {`
-            ${JSON.stringify({
+        {/* Structured data for better search results */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "xiaohongmodels.vercel.app",
@@ -182,13 +175,15 @@ export default function RootLayout({
                 "name": "xiaohongmodels",
                 "url": "https://xiaohongmodels.vercel.app"
               }
-            })}
-          `}
-        </Script>
+            })
+          }}
+        />
         
-        <Script id="local-business-schema" strategy="afterInteractive">
-          {`
-            ${JSON.stringify({
+        {/* Local Business Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "xiaohongmodels",
@@ -234,13 +229,15 @@ export default function RootLayout({
               "serviceType": "模特私教服务",
               "priceRange": "$$",
               "openingHours": "Mo-Su 00:00-23:59"
-            })}
-          `}
-        </Script>
+            })
+          }}
+        />
         
-        <Script id="faq-schema" strategy="afterInteractive">
-          {`
-            ${JSON.stringify({
+        {/* FAQ Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
               "mainEntity": [
@@ -269,9 +266,18 @@ export default function RootLayout({
                   }
                 }
               ]
-            })}
-          `}
-        </Script>
+            })
+          }}
+        />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <LanguageProvider>
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </LanguageProvider>
       </body>
     </html>
   );

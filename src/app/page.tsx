@@ -15,7 +15,7 @@ export default function Home() {
       <DynamicTitle title={t('home.title')} />
       <Navigation />
       
-      {/* Hero Section with Optimized Image */}
+      {/* Hero Section with Large Image */}
       <section className="relative w-full overflow-hidden p-1 sm:p-1 lg:p-1">
         <div className="max-w-5xl mx-auto">
           <Image
@@ -25,9 +25,6 @@ export default function Home() {
             height={1080}
             className="w-full h-auto"
             priority
-            placeholder="blur"
-            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
           />
         </div>
       </section>
@@ -51,8 +48,6 @@ export default function Home() {
             <div className="border-t border-gray-200"></div>
           </div>
         </div>
-        
-        {/* Optimized City Grid with Lazy Loading */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
           <Link href="/newyork" className="group relative overflow-hidden bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-pink-300 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
             <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-red-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -108,8 +103,6 @@ export default function Home() {
             </div>
           </Link>
         </div>
-        
-        {/* Services Section - Load after critical content */}
         <section className="text-base sm:text-lg">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-center text-hero-subtitle">{t('services.title')}</h2>
           <div className="pl-6 space-y-2 text-center text-red-600 mb-8 text-hero-description">
@@ -119,8 +112,6 @@ export default function Home() {
           </div>
           <p className="mt-8 text-center text-hero-description">{t('services.booking')}</p>
           <p className="mt-4 text-center mb-12 text-hero-description">{t('services.browse')}</p>
-          
-          {/* FAQ Section - Load after services */}
           <div className="pl-6 space-y-4 text-hero-description">
             <div>{t('faq.location')}</div>
             <div>{t('faq.location.answer')}</div>
