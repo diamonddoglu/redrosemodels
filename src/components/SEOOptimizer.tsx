@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 export default function SEOOptimizer() {
   // Default to Simplified Chinese for SEO purposes
   const language = 'zh-CN';
@@ -105,18 +107,22 @@ export default function SEOOptimizer() {
 
   return (
     <>
-      {/* Structured Data */}
-      <script
+      {/* Structured Data - Deferred */}
+      <Script
+        id="seo-website-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData)
         }}
+        strategy="afterInteractive"
       />
-      <script
+      <Script
+        id="seo-business-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessData)
         }}
+        strategy="afterInteractive"
       />
       
       {/* Additional SEO Meta Tags */}

@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 export default function SEOKeywords() {
   // SEO Keywords in all supported languages
   const seoKeywords = {
@@ -53,8 +55,9 @@ export default function SEOKeywords() {
       <meta name="keywords-ko" content={seoKeywords['ko'].join(', ')} />
       <meta name="keywords-ja" content={seoKeywords['ja'].join(', ')} />
       
-      {/* Structured data for keywords */}
-      <script
+      {/* Structured data for keywords - Deferred */}
+      <Script
+        id="keywords-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -66,6 +69,7 @@ export default function SEOKeywords() {
             "url": "https://xiaohongmodels.vercel.app"
           })
         }}
+        strategy="afterInteractive"
       />
     </>
   );

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SEOOptimizer from "@/components/SEOOptimizer";
@@ -10,11 +11,13 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 export const viewport: Viewport = {
@@ -102,11 +105,12 @@ export default function RootLayout({
         <SEOKeywords />
         
         {/* Google Analytics */}
-        <script
-          async
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+          strategy="afterInteractive"
         />
-        <script
+        <Script
+          id="google-analytics"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -118,6 +122,7 @@ export default function RootLayout({
               });
             `,
           }}
+          strategy="afterInteractive"
         />
         
         {/* Preconnect to external domains for performance */}
@@ -128,6 +133,10 @@ export default function RootLayout({
         {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        
+        {/* Preload critical resources */}
+        <link rel="preload" href="/xiaohongmodels-hero.jpg" as="image" />
+        <link rel="preload" href="/favicon.svg" as="image" />
         
         {/* Manifest for PWA */}
         <link rel="manifest" href="/manifest.json" />
@@ -154,8 +163,9 @@ export default function RootLayout({
         <meta name="geo.position" content="40.7128;-74.0060" />
         <meta name="ICBM" content="40.7128, -74.0060" />
         
-        {/* Structured data for better search results */}
-        <script
+        {/* Structured data for better search results - Deferred */}
+        <Script
+          id="website-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -177,10 +187,12 @@ export default function RootLayout({
               }
             })
           }}
+          strategy="afterInteractive"
         />
         
-        {/* Local Business Schema */}
-        <script
+        {/* Local Business Schema - Deferred */}
+        <Script
+          id="business-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -231,10 +243,12 @@ export default function RootLayout({
               "openingHours": "Mo-Su 00:00-23:59"
             })
           }}
+          strategy="afterInteractive"
         />
         
-        {/* FAQ Schema */}
-        <script
+        {/* FAQ Schema - Deferred */}
+        <Script
+          id="faq-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -268,6 +282,7 @@ export default function RootLayout({
               ]
             })
           }}
+          strategy="afterInteractive"
         />
       </head>
       <body
@@ -278,6 +293,31 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights />
         </LanguageProvider>
+        
+        {/* Page load optimization script */}
+        <Script
+          id="page-load-optimization"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Enable transitions after page load
+              window.addEventListener('load', function() {
+                document.body.classList.add('loaded');
+              });
+              
+              // Preload critical images
+              const criticalImages = [
+                '/xiaohongmodels-hero.jpg',
+                '/favicon.svg'
+              ];
+              
+              criticalImages.forEach(src => {
+                const img = new Image();
+                img.src = src;
+              });
+            `
+          }}
+        />
       </body>
     </html>
   );
