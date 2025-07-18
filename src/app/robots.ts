@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/', '/private/'],
     },
-    sitemap: 'https://xiaohongmodels.com/sitemap.xml',
+    sitemap: 'https://xiaohongmodels.vercel.app/sitemap.xml',
   }
 } 

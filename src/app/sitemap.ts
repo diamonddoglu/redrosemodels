@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { models } from '@/data/models'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://xiaohongmodels.com'
+  const baseUrl = 'https://xiaohongmodels.vercel.app'
   const currentDate = new Date()
   
   // Main pages with high priority
