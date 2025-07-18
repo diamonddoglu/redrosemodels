@@ -105,6 +105,7 @@ const translations = {
     'model.photo': '照片',
     'model.modelPhoto': '模特照片',
     'model.introduction': '模特介绍',
+    'model.viewDetails': '查看详情',
     // City pages
     'city.models': '模特库',
     'model.label': '模特',
@@ -321,6 +322,7 @@ const translations = {
     'model.photo': '照片',
     'model.modelPhoto': '模特照片',
     'model.introduction': '模特介紹',
+    'model.viewDetails': '查看詳情',
     // City pages
     'city.models': '模特庫',
     'model.label': '模特',
@@ -537,6 +539,7 @@ const translations = {
     'model.photo': '사진',
     'model.modelPhoto': '모델 사진',
     'model.introduction': '모델 소개',
+    'model.viewDetails': '상세 보기',
     // City pages
     'city.models': '모델',
     'model.label': '모델',
@@ -753,6 +756,7 @@ const translations = {
     'model.photo': '写真',
     'model.modelPhoto': 'モデル写真',
     'model.introduction': 'モデル紹介',
+    'model.viewDetails': '詳細を見る',
     // City pages
     'city.models': 'モデル',
     'model.label': 'モデル',

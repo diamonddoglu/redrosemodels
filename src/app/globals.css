@@ -29,38 +29,6 @@ body {
   @apply block text-center rounded-lg bg-white border border-gray-200 shadow hover:bg-red-100 hover:text-red-600 transition-colors py-3 text-lg font-semibold;
 }
 
-/* Mobile-specific styles for model cards */
-@media (hover: none) and (pointer: coarse) {
-  /* Disable hover effects on touch devices */
-  .group:hover .group-hover\:translate-y-0,
-  .group:hover .group-hover\:opacity-100 {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  
-  /* Add active state for touch feedback */
-  .model-card-touch:active {
-    transform: scale(0.98);
-    transition: transform 0.1s ease;
-  }
-}
-
-/* Ensure overlay is visible on touch devices when touched or manually shown */
-.model-card-overlay.touched {
-  transform: translateY(0) !important;
-  opacity: 1 !important;
-}
-
-/* Prevent text selection on mobile for better UX */
-.model-card-touch {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 /* Custom typography classes to replace inline styles */
 .text-hero-title {
   font-size: 54px;
