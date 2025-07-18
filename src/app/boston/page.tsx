@@ -5,6 +5,7 @@ import ModelCard from '@/components/ModelCard';
 import Navigation from '@/components/Navigation';
 import DynamicTitle from '@/components/DynamicTitle';
 import LegalFooter from '@/components/LegalFooter';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useState } from 'react';
 
@@ -24,10 +25,15 @@ export default function BostonPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const breadcrumbItems = [
+    { name: '首页', url: 'https://xiaohongmodels.vercel.app' },
+    { name: '波士顿模特', url: 'https://xiaohongmodels.vercel.app/boston' }
+  ];
 
   return (
       <div className="min-h-screen bg-white">
         <DynamicTitle title={t('city.boston')} subtitle={t('city.models')} />
+        <BreadcrumbSchema items={breadcrumbItems} />
         <Navigation />
         <div className="max-w-7xl mx-auto px-8 py-8 sm:px-12 lg:px-8">
           <div className="flex items-center justify-center mb-4">

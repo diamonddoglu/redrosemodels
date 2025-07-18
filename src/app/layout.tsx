@@ -184,6 +184,97 @@ export default function RootLayout({
             })
           }}
         />
+        
+        {/* Local Business Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "xiaohongmodels",
+              "description": "北美高素质模特私教上门服务",
+              "url": "https://xiaohongmodels.vercel.app",
+              "telephone": "+1-XXX-XXX-XXXX",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "US",
+                "addressRegion": "North America"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "40.7128",
+                "longitude": "-74.0060"
+              },
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "New York"
+                },
+                {
+                  "@type": "City", 
+                  "name": "Los Angeles"
+                },
+                {
+                  "@type": "City",
+                  "name": "San Francisco"
+                },
+                {
+                  "@type": "City",
+                  "name": "Boston"
+                },
+                {
+                  "@type": "City",
+                  "name": "Seattle"
+                },
+                {
+                  "@type": "City",
+                  "name": "Las Vegas"
+                }
+              ],
+              "serviceType": "模特私教服务",
+              "priceRange": "$$",
+              "openingHours": "Mo-Su 00:00-23:59"
+            })
+          }}
+        />
+        
+        {/* FAQ Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "服务地点如何选择？",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可选择酒店或您的住所，模特提供上门服务，我们暂不提供固定场所。"
+                  }
+                },
+                {
+                  "@type": "Question", 
+                  "name": "具体服务内容有哪些？",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "服务内容由您与模特双方协商确定，我们提供平台对接服务。"
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "付款方式是什么？", 
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "见面确认满意后，可通过现金或转账方式直接支付给模特。"
+                  }
+                }
+              ]
+            })
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
