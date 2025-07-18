@@ -60,10 +60,10 @@ export default function SEOKeywords() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "xiaohongmodels.com",
+            "name": "xiaohongmodels.vercel.app",
             "keywords": generateKeywordsMeta(),
             "description": "北美高素质模特私教上门服务，提供纽约、洛杉矶、旧金山、波士顿、西雅图、拉斯维加斯等地区模特私教服务。",
-            "url": "https://xiaohongmodels.com"
+            "url": "https://xiaohongmodels.vercel.app"
           })
         }}
       />

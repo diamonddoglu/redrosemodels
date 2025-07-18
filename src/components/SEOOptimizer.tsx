@@ -6,19 +6,19 @@ export default function SEOOptimizer() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "xiaohongmodels.com",
-    "url": "https://xiaohongmodels.com",
+    "name": "xiaohongmodels.vercel.app",
+    "url": "https://xiaohongmodels.vercel.app",
     "description": "北美高素质模特私教上门服务，提供纽约、洛杉矶、旧金山、波士顿、西雅图、拉斯维加斯等地区模特私教服务。",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://xiaohongmodels.com/search?q={search_term_string}",
+      "target": "https://xiaohongmodels.vercel.app/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
     "inLanguage": language === 'zh-CN' ? 'zh-CN' : language === 'zh-TW' ? 'zh-TW' : language,
     "publisher": {
       "@type": "Organization",
       "name": "xiaohongmodels",
-      "url": "https://xiaohongmodels.com"
+      "url": "https://xiaohongmodels.vercel.app"
     }
   };
 
@@ -28,7 +28,7 @@ export default function SEOOptimizer() {
     "@type": "LocalBusiness",
     "name": "xiaohongmodels",
     "description": "北美高素质模特私教上门服务",
-    "url": "https://xiaohongmodels.com",
+    "url": "https://xiaohongmodels.vercel.app",
     "telephone": "+1-xxx-xxx-xxxx",
     "address": {
       "@type": "PostalAddress",
@@ -128,7 +128,7 @@ export default function SEOOptimizer() {
       {/* Social Media Meta Tags */}
       <meta property="og:locale" content={language === 'zh-CN' ? 'zh_CN' : language === 'zh-TW' ? 'zh_TW' : language} />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="xiaohongmodels.com" />
+      <meta property="og:site_name" content="xiaohongmodels.vercel.app" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:site" content="@xiaohongmodels" />

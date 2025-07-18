@@ -110,9 +110,9 @@ const translations = {
     'model.label': '模特',
     
     // Page titles and pagination
-    'page.title.city': '模特 - 第{page}页 - xiaohongmodels.com',
-    'page.title.city.first': '模特 - 第1页 - xiaohongmodels.com',
-    'page.title.model': '模特 - xiaohongmodels.com',
+    'page.title.city': '模特 - 第{page}页 - xiaohongmodels.vercel.app',
+    'page.title.city.first': '模特 - 第1页 - xiaohongmodels.vercel.app',
+    'page.title.model': '模特 - xiaohongmodels.vercel.app',
     'pagination.previous': '上一页',
     'pagination.next': '下一页',
     'pagination.page': '第{page}页',
@@ -326,9 +326,9 @@ const translations = {
     'model.label': '模特',
     
     // Page titles and pagination
-    'page.title.city': '模特 - 第{page}頁 - xiaohongmodels.com',
-    'page.title.city.first': '模特 - 第1頁 - xiaohongmodels.com',
-    'page.title.model': '模特 - xiaohongmodels.com',
+    'page.title.city': '模特 - 第{page}頁 - xiaohongmodels.vercel.app',
+    'page.title.city.first': '模特 - 第1頁 - xiaohongmodels.vercel.app',
+    'page.title.model': '模特 - xiaohongmodels.vercel.app',
     'pagination.previous': '上一頁',
     'pagination.next': '下一頁',
     'pagination.page': '第{page}頁',
@@ -542,9 +542,9 @@ const translations = {
     'model.label': '모델',
     
     // Page titles and pagination
-    'page.title.city': '모델 - {page}페이지 - xiaohongmodels.com',
-    'page.title.city.first': '모델 - 1페이지 - xiaohongmodels.com',
-    'page.title.model': '모델 - xiaohongmodels.com',
+    'page.title.city': '모델 - {page}페이지 - xiaohongmodels.vercel.app',
+    'page.title.city.first': '모델 - 1페이지 - xiaohongmodels.vercel.app',
+    'page.title.model': '모델 - xiaohongmodels.vercel.app',
     'pagination.previous': '이전',
     'pagination.next': '다음',
     'pagination.page': '{page}페이지',
@@ -758,9 +758,9 @@ const translations = {
     'model.label': 'モデル',
     
     // Page titles and pagination
-    'page.title.city': 'モデル - {page}ページ - xiaohongmodels.com',
-    'page.title.city.first': 'モデル - 1ページ - xiaohongmodels.com',
-    'page.title.model': 'モデル - xiaohongmodels.com',
+    'page.title.city': 'モデル - {page}ページ - xiaohongmodels.vercel.app',
+    'page.title.city.first': 'モデル - 1ページ - xiaohongmodels.vercel.app',
+    'page.title.model': 'モデル - xiaohongmodels.vercel.app',
     'pagination.previous': '前へ',
     'pagination.next': '次へ',
     'pagination.page': '{page}ページ',

@@ -24,8 +24,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://xiaohongmodels.com'),
-  title: "北美小红模特私教预约平台 - 专业模特私教服务 | xiaohongmodels.com",
+  metadataBase: new URL('https://xiaohongmodels.vercel.app'),
+  title: "北美小红模特私教预约平台 - 专业模特私教服务 | xiaohongmodels.vercel.app",
   description: "北美高素质模特私教上门服务，提供纽约、洛杉矶、旧金山、波士顿、西雅图、拉斯维加斯等地区模特私教服务。不收会员费、免订金、诚信服务、隐私保护。",
   keywords: "模特私教,北美模特,上门服务,纽约模特,洛杉矶模特,旧金山模特,波士顿模特,西雅图模特,拉斯维加斯模特,华人模特,亚洲模特,私教服务,模特预约,高端模特,专业模特,美国外围,北美修车,伴游,私钟,快餐,留学生,援交,escort,旧金山外围,洛杉矶外围,纽约外围,芝加哥外围,拉斯维加斯外围,华盛顿外围,波士顿外围,空降",
   authors: [{ name: "xiaohongmodels" }],
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "北美小红模特私教预约平台 - 专业模特私教服务",
     description: "北美高素质模特私教上门服务，提供纽约、洛杉矶、旧金山、波士顿、西雅图、拉斯维加斯等地区模特私教服务。不收会员费、免订金、诚信服务。",
-    url: "https://xiaohongmodels.com",
-    siteName: "xiaohongmodels.com",
+    url: "https://xiaohongmodels.vercel.app",
+    siteName: "xiaohongmodels.vercel.app",
     locale: "zh_CN",
     type: "website",
     images: [
@@ -59,12 +59,12 @@ export const metadata: Metadata = {
     images: ['/xiaohongmodels-hero.jpg'],
   },
   alternates: {
-    canonical: "https://xiaohongmodels.com",
+    canonical: "https://xiaohongmodels.vercel.app",
     languages: {
-      'zh-CN': 'https://xiaohongmodels.com',
-      'zh-TW': 'https://xiaohongmodels.com',
-      'ko': 'https://xiaohongmodels.com',
-      'ja': 'https://xiaohongmodels.com',
+      'zh-CN': 'https://xiaohongmodels.vercel.app',
+      'zh-TW': 'https://xiaohongmodels.vercel.app',
+      'ko': 'https://xiaohongmodels.vercel.app',
+      'ja': 'https://xiaohongmodels.vercel.app',
     },
   },
   other: {
@@ -165,19 +165,19 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "xiaohongmodels.com",
-              "url": "https://xiaohongmodels.com",
+              "name": "xiaohongmodels.vercel.app",
+              "url": "https://xiaohongmodels.vercel.app",
               "description": "北美高素质模特私教上门服务",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://xiaohongmodels.com/search?q={search_term_string}",
+                "target": "https://xiaohongmodels.vercel.app/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               },
               "inLanguage": "zh-CN",
               "publisher": {
                 "@type": "Organization",
                 "name": "xiaohongmodels",
-                "url": "https://xiaohongmodels.com"
+                "url": "https://xiaohongmodels.vercel.app"
               }
             })
           }}

@@ -1,4 +1,4 @@
-# xiaohongmodels.com
+# xiaohongmodels.vercel.app
 
 本项目是一个使用 Next.js 构建的中文（简体）模特私教预约平台前端网站，专为 SEO 和响应式设计优化。网站包含首页、主要城市页面（如纽约、洛杉矶等）、每个模特的独立展示页面。无后端，仅前端，计划部署在 Vercel。
 
