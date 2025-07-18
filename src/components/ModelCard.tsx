@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState } from 'react';
 
 interface ModelCardProps {
   id: string;
@@ -20,16 +21,30 @@ interface ModelCardProps {
 
 export default function ModelCard({ id, name, mainImage, city, priority = false }: ModelCardProps) {
   const { language, t } = useLanguage();
+  const [isTouched, setIsTouched] = useState(false);
   
   const modelName = name[language as keyof typeof name] || name['zh-CN'];
   const cityName = t(`city.${city}`);
   const modelLabel = t('model.label');
   const cityModelSubtitle = t(`model.card.${city}.subtitle`);
 
+  const handleTouchStart = () => {
+    setIsTouched(true);
+  };
+
+  const handleTouchEnd = () => {
+    // Keep the overlay visible for a moment after touch
+    setTimeout(() => setIsTouched(false), 1000);
+  };
+
   return (
     <Link href={`/${city}/${id}`} className="block">
       <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-        <div className="relative aspect-[3/4] w-full group">
+        <div 
+          className="relative aspect-[3/4] w-full group model-card-touch"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <Image
             src={mainImage}
             alt={`${id} - ${cityName}${modelLabel}`}
@@ -60,7 +75,13 @@ export default function ModelCard({ id, name, mainImage, city, priority = false 
           />
           {/* Slide Up Hover overlay with model name */}
           <div
-            className="absolute inset-0 flex flex-col items-center justify-center transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400 bg-gradient-to-t from-black/70 via-black/40 to-transparent"
+            className={`absolute inset-0 flex flex-col items-center justify-center transform transition-all duration-400 bg-gradient-to-t from-black/70 via-black/40 to-transparent model-card-overlay ${
+              // Show overlay on hover (desktop) OR when touched (mobile)
+              'group-hover:translate-y-0 group-hover:opacity-100 translate-y-full opacity-0'
+            } ${
+              // Mobile touch state
+              isTouched ? 'touched' : ''
+            }`}
           >
             <h3 className="text-3xl font-bold text-white mb-2 drop-shadow-lg">{modelName}</h3>
             <p className="text-lg text-white drop-shadow">{cityModelSubtitle}</p>
