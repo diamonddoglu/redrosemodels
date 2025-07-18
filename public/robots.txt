@@ -22,13 +22,5 @@ Crawl-delay: 1
 # Sitemap location
 Sitemap: https://xiaohongmodels.vercel.app/sitemap.xml
 
-# Additional sitemaps
-Sitemap: https://xiaohongmodels.vercel.app/sitemap-newyork.xml
-Sitemap: https://xiaohongmodels.vercel.app/sitemap-losangeles.xml
-Sitemap: https://xiaohongmodels.vercel.app/sitemap-sanfrancisco.xml
-Sitemap: https://xiaohongmodels.vercel.app/sitemap-boston.xml
-Sitemap: https://xiaohongmodels.vercel.app/sitemap-seattle.xml
-Sitemap: https://xiaohongmodels.vercel.app/sitemap-lasvegas.xml
-
 # Host directive
 Host: https://xiaohongmodels.vercel.app 
