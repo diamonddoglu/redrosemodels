@@ -19,7 +19,7 @@ export default function Home() {
       <section className="relative w-full overflow-hidden p-1 sm:p-1 lg:p-1">
         <div className="max-w-5xl mx-auto">
           <Image
-            src="/xiaohongmodels-hero.jpg"
+            src="/redrosemodels-hero.jpg"
             alt="红玫瑰模特私教"
             width={1920}
             height={1080}
