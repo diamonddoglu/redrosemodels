@@ -27,13 +27,15 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="backdrop-blur-md bg-white/70 shadow-xl rounded-2xl border border-gray-200 mt-4 mx-auto sticky top-4 z-50 transition-all" style={{ left: 0, right: 0 }}>
+    <nav className="backdrop-blur-md bg-white/70 shadow-xl rounded-2xl border border-gray-200 mt-4 mx-auto sticky top-4 z-50 transition-all rose-shadow" style={{ left: 0, right: 0 }} aria-label="主导航">
       <div className="flex justify-between items-center h-16 px-4 sm:px-6 lg:px-10">
         {/* Mobile menu button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-pink-100 hover:text-pink-600 transition-colors"
-          aria-label="Toggle menu"
+          className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-red-100 hover:text-red-600 transition-colors"
+          aria-label={isMobileMenuOpen ? "关闭菜单" : "打开菜单"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isMobileMenuOpen ? (
@@ -45,7 +47,7 @@ export default function Navigation() {
         </button>
 
         {/* Desktop navigation - centered */}
-        <div className="hidden lg:flex items-center justify-center flex-1">
+        <div className="hidden lg:flex items-center justify-center flex-1" role="navigation" aria-label="桌面导航">
           <div className="flex items-center space-x-4">
             {navItems.map((item) => {
               const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
@@ -54,7 +56,7 @@ export default function Navigation() {
                   key={item.href}
                   href={item.href}
                   className={`px-4 py-3 rounded-full text-base font-medium transition-all duration-200
-                    ${isActive ? 'bg-gradient-to-r from-pink-400 via-pink-300 to-purple-300 text-white shadow-md' : 'text-gray-700 hover:bg-pink-100 hover:text-pink-600'}
+                    ${isActive ? 'rose-gradient text-white shadow-md' : 'text-gray-700 hover:bg-red-100 hover:text-red-600'}
                   `}
                   style={{ minWidth: '80px', textAlign: 'center' }}
                 >
@@ -72,7 +74,7 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl border border-gray-200 rounded-b-2xl mt-2">
+          <div id="mobile-menu" className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl border border-gray-200 rounded-b-2xl mt-2" role="navigation" aria-label="移动端导航">
             <div className="flex flex-col space-y-2 p-4">
               {navItems.map((item) => {
                 const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
@@ -82,7 +84,7 @@ export default function Navigation() {
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`px-4 py-3 rounded-full text-base font-medium transition-all duration-200
-                      ${isActive ? 'bg-gradient-to-r from-pink-400 via-pink-300 to-purple-300 text-white shadow-md' : 'text-gray-700 hover:bg-pink-100 hover:text-pink-600'}
+                      ${isActive ? 'rose-gradient text-white shadow-md' : 'text-gray-700 hover:bg-red-100 hover:text-red-600'}
                     `}
                   >
                     {item.label}

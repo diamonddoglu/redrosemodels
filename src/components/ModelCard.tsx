@@ -31,7 +31,7 @@ export default function ModelCard({ id, name, mainImage, city, priority = false 
   return (
     <div className="block">
       <div 
-        className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative"
+        className="bg-white rounded-lg shadow-md overflow-hidden hover:rose-shadow-hover transition-all duration-500 relative border-2 border-transparent hover:border-red-400 transform hover:-translate-y-2"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onTouchStart={() => setIsHovered(true)}
@@ -57,12 +57,12 @@ export default function ModelCard({ id, name, mainImage, city, priority = false 
               if (parent) {
                 parent.innerHTML = '';
                 const placeholder = document.createElement('div');
-                placeholder.className = 'absolute inset-0 bg-gradient-to-br from-pink-100 to-red-100 flex items-center justify-center';
+                placeholder.className = 'absolute inset-0 rose-gradient-light flex items-center justify-center';
                 placeholder.innerHTML = `
                   <div class="text-center">
-                    <div class="text-4xl mb-2">👩</div>
-                    <div class="text-sm text-gray-600 font-medium">${id}</div>
-                    <div class="text-xs text-gray-500">${modelLabel}照片</div>
+                    <div class="text-4xl mb-2">🌹</div>
+                    <div class="text-sm text-red-700 font-medium">${id}</div>
+                    <div class="text-xs text-red-600">${modelLabel}照片</div>
                   </div>
                 `;
                 parent.appendChild(placeholder);
@@ -72,7 +72,7 @@ export default function ModelCard({ id, name, mainImage, city, priority = false 
           
           {/* Overlay that shows on hover/touch */}
           <div
-            className={`absolute inset-0 flex flex-col items-center justify-center transform transition-all duration-300 bg-gradient-to-t from-black/70 via-black/40 to-transparent ${
+            className={`absolute inset-0 flex flex-col items-center justify-center transform transition-all duration-500 bg-gradient-to-t from-red-900/80 via-red-600/50 to-transparent ${
               isHovered 
                 ? 'translate-y-0 opacity-100' 
                 : 'translate-y-full opacity-0'
@@ -84,7 +84,7 @@ export default function ModelCard({ id, name, mainImage, city, priority = false 
             {/* View Details Button */}
             <Link 
               href={`/${city}/${id}`}
-              className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg"
+              className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-red-50 hover:text-red-700 transition-all duration-300 shadow-lg border-2 border-white hover:border-red-200"
               onClick={(e) => e.stopPropagation()}
             >
               {t('model.viewDetails') || 'View Details'}

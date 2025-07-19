@@ -3,6 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --rose-primary: #dc2626;
+  --rose-secondary: #f43f5e;
+  --rose-light: #fef2f2;
+  --rose-dark: #991b1b;
+  --rose-accent: #be185d;
 }
 
 @theme inline {
@@ -25,8 +30,74 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Accessibility improvements */
+:focus {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #dc2626;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --rose-primary: #8b0000;
+    --rose-secondary: #b91c1c;
+    --rose-accent: #7f1d1d;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 .city-link {
   @apply block text-center rounded-lg bg-white border border-gray-200 shadow hover:bg-red-100 hover:text-red-600 transition-colors py-3 text-lg font-semibold;
+}
+
+/* Rose-themed gradient backgrounds */
+.rose-gradient {
+  background: linear-gradient(135deg, #dc2626 0%, #f43f5e 50%, #be185d 100%);
+}
+
+.rose-gradient-light {
+  background: linear-gradient(135deg, #fef2f2 0%, #fce7f3 50%, #fdf2f8 100%);
+}
+
+.rose-gradient-hover {
+  background: linear-gradient(135deg, #f43f5e 0%, #dc2626 50%, #be185d 100%);
 }
 
 /* Custom typography classes to replace inline styles */
@@ -35,6 +106,10 @@ body {
   line-height: 1.16;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 700;
+  background: linear-gradient(135deg, #dc2626 0%, #be185d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .text-hero-subtitle {
@@ -42,6 +117,7 @@ body {
   line-height: 1.2;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 450;
+  color: #dc2626;
 }
 
 .text-hero-description {
@@ -56,6 +132,7 @@ body {
   line-height: 1.4;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 450;
+  color: #be185d;
 }
 
 .text-city-button {
@@ -70,6 +147,10 @@ body {
   line-height: 1.16;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 450;
+  background: linear-gradient(135deg, #dc2626 0%, #be185d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .text-model-title {
@@ -83,4 +164,18 @@ body {
   line-height: 1.3;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 450;
+  color: #dc2626;
+}
+
+/* Rose-themed border and shadow utilities */
+.rose-border {
+  border: 2px solid #dc2626;
+}
+
+.rose-shadow {
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.2);
+}
+
+.rose-shadow-hover {
+  box-shadow: 0 15px 35px rgba(220, 38, 38, 0.3);
 }

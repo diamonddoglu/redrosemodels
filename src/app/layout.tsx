@@ -22,7 +22,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: '#ffffff',
+  themeColor: '#dc2626',
 };
 
 export const metadata: Metadata = {
@@ -96,7 +96,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" className="scroll-smooth">
       <head>
         <SEOOptimizer />
         <SEOKeywords />
@@ -272,6 +272,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ scrollBehavior: 'smooth' }}
       >
         <LanguageProvider>
           {children}
