@@ -20,7 +20,7 @@ Allow: /lasvegas/
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://xiaohongmodels.vercel.app/sitemap.xml
+Sitemap: https://redrosemodels.vercel.app/sitemap.xml
 
 # Host directive
-Host: https://xiaohongmodels.vercel.app 
+Host: https://redrosemodels.vercel.app 

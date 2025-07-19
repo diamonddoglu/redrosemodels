@@ -20,7 +20,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <Image
             src="/xiaohongmodels-hero.jpg"
-            alt="小红模特私教"
+            alt="红玫瑰模特私教"
             width={1920}
             height={1080}
             className="w-full h-auto"
@@ -36,7 +36,7 @@ export default function Home() {
         <h1 className="text-center mb-4 text-hero-title">{t('home.title')}</h1>
         <p className="mb-4 text-center text-hero-description">{t('home.description')}</p>
         <p className="mb-4 text-center text-hero-description">{t('home.description2')}</p>
-        <p className="mb-4 text-center text-hero-description" style={{ color: '#ff00ff' }}>{t('home.contact')} <a href="https://t.me/xiaohongmodels" className="underline" target="_blank" rel="noopener noreferrer" style={{ color: '#ff00ff' }}>https://t.me/xiaohongmodels</a></p>
+        <p className="mb-4 text-center text-hero-description" style={{ color: '#ff00ff' }}>{t('home.contact')} <a href="https://t.me/redrosemodels" className="underline" target="_blank" rel="noopener noreferrer" style={{ color: '#ff00ff' }}>https://t.me/redrosemodels</a></p>
         <div className="flex items-center justify-center mb-4">
           <div className="flex-1 flex flex-col gap-2">
             <div className="border-t border-gray-200"></div>

@@ -13,7 +13,7 @@ export default function DynamicTitle({ title, subtitle }: DynamicTitleProps) {
 
   useEffect(() => {
     const fullTitle = subtitle ? `${title} - ${subtitle}` : title;
-    document.title = `${fullTitle} | xiaohongmodels.vercel.app`;
+    document.title = `${fullTitle} | redrosemodels.vercel.app`;
   }, [title, subtitle, language]);
 
   return null;

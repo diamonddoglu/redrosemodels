@@ -26,8 +26,8 @@ export default function BostonPage() {
   };
 
   const breadcrumbItems = [
-    { name: '首页', url: 'https://xiaohongmodels.vercel.app' },
-    { name: '波士顿模特', url: 'https://xiaohongmodels.vercel.app/boston' }
+    { name: '首页', url: 'https://redrosemodels.vercel.app' },
+    { name: '波士顿模特', url: 'https://redrosemodels.vercel.app/boston' }
   ];
 
   return (

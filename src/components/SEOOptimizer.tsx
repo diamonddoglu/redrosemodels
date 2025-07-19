@@ -6,19 +6,19 @@ export default function SEOOptimizer() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "xiaohongmodels.vercel.app",
-    "url": "https://xiaohongmodels.vercel.app",
+    "name": "redrosemodels.vercel.app",
+    "url": "https://redrosemodels.vercel.app",
     "description": "北美高素质模特私教上门服务，提供纽约、洛杉矶、旧金山、波士顿、西雅图、拉斯维加斯等地区模特私教服务。",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://xiaohongmodels.vercel.app/search?q={search_term_string}",
+      "target": "https://redrosemodels.vercel.app/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
     "inLanguage": language === 'zh-CN' ? 'zh-CN' : language === 'zh-TW' ? 'zh-TW' : language,
     "publisher": {
       "@type": "Organization",
-      "name": "xiaohongmodels",
-      "url": "https://xiaohongmodels.vercel.app"
+      "name": "redrosemodels",
+      "url": "https://redrosemodels.vercel.app"
     }
   };
 
@@ -26,9 +26,9 @@ export default function SEOOptimizer() {
   const localBusinessData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "xiaohongmodels",
+    "name": "redrosemodels",
     "description": "北美高素质模特私教上门服务",
-    "url": "https://xiaohongmodels.vercel.app",
+    "url": "https://redrosemodels.vercel.app",
     "telephone": "+1-xxx-xxx-xxxx",
     "address": {
       "@type": "PostalAddress",
@@ -128,18 +128,18 @@ export default function SEOOptimizer() {
       {/* Social Media Meta Tags */}
       <meta property="og:locale" content={language === 'zh-CN' ? 'zh_CN' : language === 'zh-TW' ? 'zh_TW' : language} />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="xiaohongmodels.vercel.app" />
+      <meta property="og:site_name" content="redrosemodels.vercel.app" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:site" content="@xiaohongmodels" />
-      <meta name="twitter:creator" content="@xiaohongmodels" />
+      <meta name="twitter:site" content="@redrosemodels" />
+      <meta name="twitter:creator" content="@redrosemodels" />
       
       {/* Mobile Meta Tags */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="xiaohongmodels" />
+      <meta name="apple-mobile-web-app-title" content="redrosemodels" />
       
       {/* Performance Meta Tags */}
       <meta name="theme-color" content="#ffffff" />

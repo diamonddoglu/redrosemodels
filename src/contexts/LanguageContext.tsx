@@ -23,19 +23,19 @@ const translations = {
     'nav.boston': '波士顿',
     'nav.seattle': '西雅图',
     'nav.lasvegas': '拉斯维加斯',
-    'nav.brand': '小红模特',
+    'nav.brand': '红玫瑰模特',
     
     // Language switcher
     'lang.switch': '繁體',
     'lang.current': '简体',
     
     // Home page
-    'home.title': '北美小红模特私教预约平台',
+    'home.title': '北美红玫瑰模特私教预约平台',
     'home.subtitle': '专业模特私教服务 - 品质保证',
     'home.tagline': '无会员费 · 免订金 · 诚信服务',
     'home.description': '我们精选纽约、洛杉矶、旧金山、波士顿、西雅图、拉斯维加斯等城市的优质模特，提供专业私教上门服务，其他城市支持空降。',
     'home.description2': '为您提供高品质的模特私教体验。',
-    'home.contact': '预约咨询：Telegram @xiaohongmodels',
+    'home.contact': '预约咨询：Telegram @redrosemodels',
     'home.browse': '浏览模特私教',
     
     // Cities
@@ -111,9 +111,9 @@ const translations = {
     'model.label': '模特',
     
     // Page titles and pagination
-    'page.title.city': '模特 - 第{page}页 - xiaohongmodels.vercel.app',
-    'page.title.city.first': '模特 - 第1页 - xiaohongmodels.vercel.app',
-    'page.title.model': '模特 - xiaohongmodels.vercel.app',
+    'page.title.city': '模特 - 第{page}页 - redrosemodels.vercel.app',
+    'page.title.city.first': '模特 - 第1页 - redrosemodels.vercel.app',
+    'page.title.model': '模特 - redrosemodels.vercel.app',
     'pagination.previous': '上一页',
     'pagination.next': '下一页',
     'pagination.page': '第{page}页',
@@ -125,9 +125,9 @@ const translations = {
     'legal.contact': '联系方式',
     'legal.contact.questions': '如有任何问题或疑虑，请通过以下方式联系：',
     'legal.lastUpdated': '最后更新时间：2025年7月',
-    'legal.telegram': 'Telegram: @xiaohongmodels',
+    'legal.telegram': 'Telegram: @redrosemodels',
     'legal.ageDisclaimer': '所有模特均为18岁或以上成年人。',
-    'legal.copyright': '© 2025 XiaohongModels. 保留所有权利。',
+    'legal.copyright': '© 2025 RedRoseModels. 保留所有权利。',
     
     // Legal content - Disclaimer
     'legal.disclaimer.important': '重要声明',
@@ -240,19 +240,19 @@ const translations = {
     'nav.boston': '波士頓',
     'nav.seattle': '西雅圖',
     'nav.lasvegas': '拉斯維加斯',
-    'nav.brand': '小紅模特',
+    'nav.brand': '紅玫瑰模特',
     
     // Language switcher
     'lang.switch': '簡體',
     'lang.current': '繁體',
     
     // Home page
-    'home.title': '北美小紅模特私教預約平台',
+    'home.title': '北美紅玫瑰模特私教預約平台',
     'home.subtitle': '專業模特私教服務 - 品質保證',
     'home.tagline': '無會員費 · 免訂金 · 誠信服務',
     'home.description': '我們精選紐約、洛杉磯、舊金山、波士頓、西雅圖、拉斯維加斯等城市的優質模特，提供專業私教上門服務，其他城市支持空降。',
     'home.description2': '為您提供高品質的模特私教體驗。',
-    'home.contact': '預約諮詢：Telegram @xiaohongmodels',
+    'home.contact': '預約諮詢：Telegram @redrosemodels',
     'home.browse': '瀏覽模特私教',
     
     // Cities
@@ -328,9 +328,9 @@ const translations = {
     'model.label': '模特',
     
     // Page titles and pagination
-    'page.title.city': '模特 - 第{page}頁 - xiaohongmodels.vercel.app',
-    'page.title.city.first': '模特 - 第1頁 - xiaohongmodels.vercel.app',
-    'page.title.model': '模特 - xiaohongmodels.vercel.app',
+    'page.title.city': '模特 - 第{page}頁 - redrosemodels.vercel.app',
+    'page.title.city.first': '模特 - 第1頁 - redrosemodels.vercel.app',
+    'page.title.model': '模特 - redrosemodels.vercel.app',
     'pagination.previous': '上一頁',
     'pagination.next': '下一頁',
     'pagination.page': '第{page}頁',
@@ -342,9 +342,9 @@ const translations = {
     'legal.contact': '聯繫方式',
     'legal.contact.questions': '如有任何問題或疑慮，請通過以下方式聯繫：',
     'legal.lastUpdated': '最後更新時間：2025年7月',
-    'legal.telegram': 'Telegram: @xiaohongmodels',
+    'legal.telegram': 'Telegram: @redrosemodels',
     'legal.ageDisclaimer': '所有模特均為18歲或以上成年人。',
-    'legal.copyright': '© 2025 XiaohongModels. 保留所有權利。',
+    'legal.copyright': '© 2025 RedRoseModels. 保留所有權利。',
     
     // Legal content - Disclaimer
     'legal.disclaimer.important': '重要聲明',
@@ -457,7 +457,7 @@ const translations = {
     'nav.boston': '보스턴',
     'nav.seattle': '시애틀',
     'nav.lasvegas': '라스베가스',
-    'nav.brand': '샤오홍 모델',
+    'nav.brand': '레드로즈 모델',
     
     // Language switcher
     'lang.switch': '한국어',
@@ -469,7 +469,7 @@ const translations = {
     'home.tagline': '회원비 없음 · 보증금 없음 · 신뢰할 수 있는 서비스',
     'home.description': '뉴욕, 로스앤젤레스, 샌프란시스코, 보스턴, 시애틀, 라스베가스 등 도시의 프리미엄 모델을 선별하여 전문 에스코트 서비스를 제공합니다. 다른 도시는 에어드롭 서비스를 지원합니다.',
     'home.description2': '고품질 모델 에스코트 경험을 제공합니다.',
-    'home.contact': '예약 문의: Telegram @xiaohongmodels',
+    'home.contact': '예약 문의: Telegram @redrosemodels',
     'home.browse': '모델 둘러보기',
     
     // Cities
@@ -545,9 +545,9 @@ const translations = {
     'model.label': '모델',
     
     // Page titles and pagination
-    'page.title.city': '모델 - {page}페이지 - xiaohongmodels.vercel.app',
-    'page.title.city.first': '모델 - 1페이지 - xiaohongmodels.vercel.app',
-    'page.title.model': '모델 - xiaohongmodels.vercel.app',
+    'page.title.city': '모델 - {page}페이지 - redrosemodels.vercel.app',
+    'page.title.city.first': '모델 - 1페이지 - redrosemodels.vercel.app',
+    'page.title.model': '모델 - redrosemodels.vercel.app',
     'pagination.previous': '이전',
     'pagination.next': '다음',
     'pagination.page': '{page}페이지',
@@ -559,9 +559,9 @@ const translations = {
     'legal.contact': '연락처',
     'legal.contact.questions': '문의사항이나 우려사항이 있으시면 다음 방법으로 연락해 주세요:',
     'legal.lastUpdated': '최종 업데이트: 2025년 7월',
-    'legal.telegram': 'Telegram: @xiaohongmodels',
+    'legal.telegram': 'Telegram: @redrosemodels',
     'legal.ageDisclaimer': '모든 모델은 18세 이상의 성인입니다.',
-    'legal.copyright': '© 2025 XiaohongModels. 모든 권리 보유.',
+    'legal.copyright': '© 2025 RedRoseModels. 모든 권리 보유.',
     
     // Legal content - Disclaimer
     'legal.disclaimer.important': '중요한 성명',
@@ -674,7 +674,7 @@ const translations = {
     'nav.boston': 'ボストン',
     'nav.seattle': 'シアトル',
     'nav.lasvegas': 'ラスベガス',
-    'nav.brand': 'シャオホンモデル',
+    'nav.brand': 'レッドローズモデル',
     
     // Language switcher
     'lang.switch': '日本語',
@@ -686,7 +686,7 @@ const translations = {
     'home.tagline': '会員費なし · 保証金なし · 信頼できるサービス',
     'home.description': 'ニューヨーク、ロサンゼルス、サンフランシスコ、ボストン、シアトル、ラスベガスなどの都市から厳選されたプレミアムモデルを提供し、プロフェッショナルなエスコートサービスを提供しています。他の都市はエアドロップサービスをサポートしています。',
     'home.description2': '高品質なモデルエスコート体験を提供します。',
-    'home.contact': '予約お問い合わせ: Telegram @xiaohongmodels',
+    'home.contact': '予約お問い合わせ: Telegram @redrosemodels',
     'home.browse': 'モデルを閲覧',
     
     // Cities
@@ -762,9 +762,9 @@ const translations = {
     'model.label': 'モデル',
     
     // Page titles and pagination
-    'page.title.city': 'モデル - {page}ページ - xiaohongmodels.vercel.app',
-    'page.title.city.first': 'モデル - 1ページ - xiaohongmodels.vercel.app',
-    'page.title.model': 'モデル - xiaohongmodels.vercel.app',
+    'page.title.city': 'モデル - {page}ページ - redrosemodels.vercel.app',
+    'page.title.city.first': 'モデル - 1ページ - redrosemodels.vercel.app',
+    'page.title.model': 'モデル - redrosemodels.vercel.app',
     'pagination.previous': '前へ',
     'pagination.next': '次へ',
     'pagination.page': '{page}ページ',
@@ -776,9 +776,9 @@ const translations = {
     'legal.contact': 'お問い合わせ',
     'legal.contact.questions': 'ご質問やご不明な点がございましたら、以下の方法でお問い合わせください：',
     'legal.lastUpdated': '最終更新: 2025年7月',
-    'legal.telegram': 'Telegram: @xiaohongmodels',
+    'legal.telegram': 'Telegram: @redrosemodels',
     'legal.ageDisclaimer': 'すべてのモデルは18歳以上の成人です。',
-    'legal.copyright': '© 2025 XiaohongModels. 全著作権所有。',
+    'legal.copyright': '© 2025 RedRoseModels. 全著作権所有。',
     
     // Legal content - Disclaimer
     'legal.disclaimer.important': '重要な声明',
